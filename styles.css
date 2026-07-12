@@ -1,0 +1,298 @@
+/* Reset и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Герой-секция */
+.hero {
+    background: url('hero-full.png') center top/contain no-repeat;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: white;
+    color: #333;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #333;
+}
+
+/* Welcome секция */
+.welcome {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.welcome-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Секции */
+section {
+    padding: 80px 0;
+    background: white;
+    margin: 20px 0;
+    border-radius: 30px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Персонажи */
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.character-card {
+    background: linear-gradient(145deg, #f5f7fa, #c3cfe2);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+}
+
+.character-photo {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background: #e0e0e0;
+}
+
+.character-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.character-card p {
+    color: #666;
+}
+
+/* Серии */
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.episode-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.episode-card:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.episode-card h4 {
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.episode-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.episode-link:hover {
+    text-decoration: underline;
+}
+
+/* Контакты */
+.contacts {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.contacts .section-title {
+    color: white;
+}
+
+.contacts-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacts-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    background: white;
+    color: #667eea;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+    background: #ffd93d;
+}
+
+/* Футер */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 40px 0;
+        margin: 10px 0;
+    }
+    
+    .welcome-image {
+        max-height: 300px;
+        object-fit: cover;
+    }
+    
+    .characters-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .character-card {
+        padding: 20px;
+    }
+    
+    .episodes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .episode-card {
+        padding: 20px;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
