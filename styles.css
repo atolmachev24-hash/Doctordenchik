@@ -22,7 +22,7 @@ body {
 
 /* Герой-секция */
 .hero {
-    background: url('hero-full.JPEG') center top/contain no-repeat;
+    background: url('hero-full.jpg') center top/contain no-repeat;
     background-color: #f5f5f5;
     min-height: 100vh;
     padding: 0;
